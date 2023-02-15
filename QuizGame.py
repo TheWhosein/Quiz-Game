@@ -37,11 +37,16 @@ def scoreBoard():
 questionNumber = 0
 score = 0
 
-try:
-    print("What do you want?\n1-Play game\n2-Scoreboard\n3-Exit\n")
-    playGame = input(">>>").lower()
-except ValueError:
-    print("Please, choose 1, 2 or 3")
+while True:
+    try:
+        print("What do you want?\n1-Play game\n2-Scoreboard\n3-Exit\n")
+        playGame = input(">>>").lower()
+        if int(playGame) < 1 or int(playGame) > 3:
+            print("Please, choose 1, 2 or 3")
+        else:
+            break
+    except ValueError:
+        print("Please, choose 1, 2 or 3")
 
 
 if playGame == "1":
