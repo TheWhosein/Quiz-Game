@@ -41,7 +41,7 @@ try:
     print("What do you want?\n1-Play game\n2-Scoreboard\n3-Exit\n")
     playGame = input(">>>").lower()
 except ValueError:
-    print("Please, write yes or no")
+    print("Please, choose 1, 2 or 3")
 
 
 if playGame == "1":
